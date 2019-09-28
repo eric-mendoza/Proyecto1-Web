@@ -31,6 +31,8 @@ Se siguió el consejo de utilizar Server Side Rendering.
 
 ## Desglose de puntos
 * Similitud de página (40pts)
+* Link a proyecto en servidor (10pts)
+* Readme bien formateado (20pts)
 * React (5tps)
 * Babel (5pts)
 * Webpack (5pts)
@@ -40,4 +42,4 @@ Se siguió el consejo de utilizar Server Side Rendering.
 * PostCss (5pts)
 * Server Side Rendering (50pts)
 
-**TOTAL: 125pts**
+**TOTAL: 155pts**
