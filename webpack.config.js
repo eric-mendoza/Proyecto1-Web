@@ -1,4 +1,6 @@
 const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
+require("@babel/register");
 
 module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.jsx'),
@@ -6,26 +8,36 @@ module.exports = {
         path: path.resolve(__dirname, 'output'),
         filename: 'bundle.js',
     },
-    resolve: {
-        extensions: ['.js', '.jsx']
-    },
     module: {
         rules: [
             {
-                test: /\.jsx/,
-                use: {
-                    loader: 'babel-loader',
-                    options: { presets: ['react', 'es2015']}
-                }
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                use: ['babel-loader', 'eslint-loader']
             },
             {
-                test: /\.scss/,
+                test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     },
+
+    // Plugins
+    plugins: [
+        new htmlWebpackPlugin({
+            template: './output/index.html',
+            filename: 'index.html',
+            hash: true
+        })
+    ],
+
+    // OPTIONAL
+    // Reload On File Change
+    //watch: true,
+    // Development Tools (Map Errors To Source File)
+    devtool: 'source-map',
+
     devServer: {
-        contentBase: './src',
-        publicPath: '/output'
+        contentBase: './output'
     }
 };

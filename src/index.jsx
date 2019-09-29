@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloWorld from './components/HelloWorld';
+import Netflix from './components/Netflix.jsx';
 
 import './styles/app.scss';
 
 ReactDOM.render(
-    <HelloWorld/>,
+    <Netflix/>,
     document.getElementById('app')
 );
