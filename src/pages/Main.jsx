@@ -4,7 +4,7 @@ import Header from '../components/Header.jsx';
 class Main extends Component {
     render () {
         return (
-            <div className="hello-world">
+            <div className="main">
                 <Header/>
             </div>
         );
