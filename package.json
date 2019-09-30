@@ -7,7 +7,7 @@
     "wdev": "webpack-dev-server --hot --inline",
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production ./src/index.js --output ./build/main.js",
     "eslint-fix": "eslint --fix \"src/*\""
   },
   "repository": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/eric-mendoza/Proyecto1-Web#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
