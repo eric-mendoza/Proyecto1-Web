@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require("webpack");
 const htmlWebpackPlugin = require('html-webpack-plugin');
 require('@babel/register');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = ({ mode } = { mode: 'production' }) => {
     console.log(`mode is: ${mode}`);
@@ -31,7 +32,8 @@ module.exports = ({ mode } = { mode: 'production' }) => {
                 {
                     test: /\.(jpg|jpeg|png)$/,
                     exclude: /node_modules/,
-                    loader: ["url-loader", "file-loader"]
+                    loader: ["url-loader"] // file-loader
+
                 },
             ],
         },
