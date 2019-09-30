@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Header from '../components/Header.jsx';
 
-export class Netflix extends Component {
+class Main extends Component {
     render () {
         return (
             <div className="hello-world">
-                <h1>Netflix</h1>
+                <Header/>
             </div>
         );
     }
 }
 
-export default Netflix;
+export default Main;

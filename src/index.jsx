@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Netflix from './components/Netflix.jsx';
-
+import App from './App.jsx';
 import './styles/app.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
-    <Netflix/>,
+    <Router>
+        <App />
+    </Router>,
     document.getElementById('app')
 );

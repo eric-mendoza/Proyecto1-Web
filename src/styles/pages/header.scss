@@ -1,0 +1,60 @@
+// Global variables
+$main-red: rgb(211,9,19);
+$main-dark: rgb(20,20,20);
+$main-deep-dark: rgb(0,0,0);
+$main-grey: rgb(153,153,153);
+$main-red-hover: #e50914;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', serif;
+  -webkit-font-smoothing: antialiased;
+  background: $main-dark;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header-container {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  background: radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7)), no-repeat center center/cover;
+
+  .header-top {
+    position: relative;
+    height: 10rem;
+  }
+
+  .logo {
+    width: 10rem;
+    height: 3.5rem;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    transform: translate(0, -50%);
+  }
+
+  .signIn-btn {
+    right: 0;
+    margin: 1.125rem 3% 0;
+    padding: 0.4375rem 1.0625rem;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 0.1875rem;
+    background: $main-red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: background 0.2s ease-in;
+    &:hover {
+      background: $main-red-hover;
+    }
+  }
+}
