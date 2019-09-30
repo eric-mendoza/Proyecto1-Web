@@ -4,11 +4,10 @@
   "description": "*Eric Mendoza - 15002*",
   "private": true,
   "scripts": {
-    "build": "webpack -p",
     "wdev": "webpack-dev-server --hot --inline",
     "dev": "webpack-dev-server --mode development",
-    "eslint-fix": "eslint --fix \"src/*\"",
-    "prod": "webpack --mode production"
+    "build": "webpack --mode production",
+    "eslint-fix": "eslint --fix \"src/*\""
   },
   "repository": {
     "type": "git",

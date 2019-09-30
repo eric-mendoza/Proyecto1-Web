@@ -1,18 +1,8 @@
-const path = require('path');
 const webpack = require("webpack");
 const htmlWebpackPlugin = require('html-webpack-plugin');
 require('@babel/register');
 
-module.exports = ({ mode } = { mode: 'production' }) => {
-    console.log(`mode is: ${mode}`);
-    return {
-        mode,
-        entry: path.resolve(__dirname, 'src', 'index.jsx'),
-        output: {
-            publicPath: "/",
-            path: path.resolve(__dirname, 'output'),
-            filename: 'bundle.js',
-        },
+module.exports = {
         module: {
             rules: [
                 {
@@ -41,16 +31,10 @@ module.exports = ({ mode } = { mode: 'production' }) => {
         plugins: [
             new htmlWebpackPlugin({
                 template: './src/index.html',
-                // filename: 'index.html',
-                // hash: true,
             }),
             new webpack.HotModuleReplacementPlugin()
         ],
 
-        // OPTIONAL
-        // Reload On File Change
-        //watch: true,
-        // Development Tools (Map Errors To Source File)
         devtool: 'source-map',
 
         devServer: {
@@ -59,5 +43,4 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             contentBase: './output',
             port: 8008
         },
-    };
 };
