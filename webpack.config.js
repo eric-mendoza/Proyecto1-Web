@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require("webpack");
 const htmlWebpackPlugin = require('html-webpack-plugin');
 require('@babel/register');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = ({ mode } = { mode: 'production' }) => {
     console.log(`mode is: ${mode}`);
@@ -58,6 +57,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             open: true,
             hot: true,
             contentBase: './output',
+            port: 8008
         },
     };
 };
