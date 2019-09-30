@@ -1,0 +1,78 @@
+.container-questions {
+  width: 100%;
+  position: relative;
+  background: rgb(0,0,0);
+  top: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  padding: 70px 45px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    box-shadow: inset 4.375rem 3.125rem 11.875rem #000, inset -4.375rem -3.125rem -11.875rem #000,;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 3rem 0 0;
+    z-index: 1;
+    width: 100%;
+
+    .title {
+      margin: 0 0 1.2rem;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1em;
+    }
+
+    .main-offer-btn {
+      display: inline-block;
+      background: $main-red;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+      margin: .5em auto;
+      padding: 1rem 0.7rem 0.6rem 1.2rem;
+      border-radius: 0.1075rem;
+      font-size: 1.175rem;
+      font-weight: 100;
+      text-align: center;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+      transition: background 0.2s ease-in;
+      cursor: pointer;
+      width: 12.5em;
+      &:hover {
+        background: $main-red-hover;
+      }
+
+      Icon {
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  .content-video {
+    position: relative;
+    margin: 3.5rem auto 0;
+    display: flex;
+    justify-content: left;
+    align-content: left;
+    text-align: left;
+    flex-direction: column;
+    padding: 70px 45px;
+    z-index: 1;
+  }
+}
